@@ -5,15 +5,21 @@ const connectDB = require("./Config/connect.mongoDB");
 
 const app = express();
 
+
+
 // MIDDLEWARES
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+
+
 // ROUTES
 app.get("/", (req, res) => {
   res.send("Server is now running");
 });
+
+
 
 const PORT = process.env.PORT || 5000;
 // SERVER RUNNING
